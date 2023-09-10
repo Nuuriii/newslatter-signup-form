@@ -10,6 +10,10 @@
       "preview": "vite preview",
       "prepare": "husky install"
    },
+   "lint-staged": {
+      "*.{js,jsx}": "eslint --fix",
+      "*.{js,jsx,css,md}": "prettier --write"
+   },
    "dependencies": {
       "axios": "^1.5.0",
       "react": "^18.2.0",
