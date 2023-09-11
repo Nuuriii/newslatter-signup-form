@@ -1,4 +1,4 @@
-import { NewsLatter } from './components/NewsLatter';
+import { NewsLatter } from './components/newslatter/NewsLatter';
 
 export const App = () => {
   return (

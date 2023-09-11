@@ -1,7 +1,7 @@
 export const SuccessMessage = () => {
   const handleReturnToForm = () => {
     // Hapus alamat email dari localStorage saat pengguna kembali ke formulir
-    localStorage.removeItem("newsletterEmail");
+    localStorage.removeItem('newsletterEmail');
     // Kembalikan ke tampilan formulir
     window.location.reload(); // Anda bisa menggunakan pendekatan yang lebih baik jika ada, misalnya dengan mengubah state komponen App
   };
