@@ -25,10 +25,22 @@ export const Wrapper = styled.div`
   background-color: hsl(0, 0%, 100%);
   flex-direction: column;
   height: 100%;
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 30rem;
+    width: 45rem;
+    padding: 1rem;
+    border-radius: 1.1rem;
+  }
 `;
 
 export const MobileImgWrapper = styled.div`
   display: flex;
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 `;
 
 export const MobileImage = styled.img`
@@ -38,6 +50,11 @@ export const MobileImage = styled.img`
 
 export const DesktopImgWrapper = styled.div`
   display: none;
+  height: 100%;
+  width: auto;
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
 `;
 
 export const DesktopImage = styled.img`
@@ -50,6 +67,11 @@ export const Information = styled.div`
   display: flex;
   padding: 1.8rem 1.5rem;
   flex-direction: column;
+  @media screen and (min-width: 768px) {
+    width: 50%;
+    padding: 1rem 0;
+    margin: 0 2.5rem 0 2rem;
+  }
 `;
 
 export const Title = styled.h1`
@@ -93,20 +115,39 @@ export const Form = styled.form`
   margin: 1rem 0;
 `;
 
+export const LabelWrapper = styled.div<{ $isError: boolean }>`
+  display: flex;
+  justify-content: space-between;
+  span {
+    display: ${(props) => (props.$isError ? 'block' : 'none')};
+    color: hsl(4, 100%, 67%);
+    font-size: 0.8rem;
+  }
+`;
+
 export const Label = styled.label`
   font-family: BoldRoboto, serif;
   color: hsl(234, 29%, 20%);
   font-size: 0.8rem;
 `;
 
-export const InputEmail = styled.input`
+export const InputEmail = styled.input<{ $isError: boolean }>`
   border: none;
   border-radius: 0.4rem;
   outline: 1px solid hsl(231, 7%, 60%);
   padding: 1rem;
+  font-family: BoldRoboto, serif;
   margin: 0.3rem 0 1.3rem 0;
   &:focus {
-    outline: 2px solid hsl(234, 29%, 20%);
+    outline: 1px solid
+      ${(props) =>
+        props.$isError ? 'hsl(4, 100%, 67%)' : 'hsl(234, 29%, 20%)'};
+    color: hsl(234, 29%, 20%);
+    &::placeholder {
+      font-family: BoldRoboto, serif;
+      color: ${(props) =>
+        props.$isError ? 'hsl(4, 100%, 67%)' : 'hsl(234, 29%, 20%)'};
+    }
   }
 `;
 

@@ -19,6 +19,7 @@ import {
   ListIcon,
   Span,
   Form,
+  LabelWrapper,
   Label,
   InputEmail,
   Button,
@@ -26,7 +27,15 @@ import {
 
 export const NewsLatter = () => {
   const [email, setEmail] = useState<string>('');
+  const [error, setError] = useState(false);
+
   const [isSubmitted, setIsSubmitted] = useState<boolean>(false);
+
+  const CheckError = () => {
+    email && email.includes('@') && email.includes('.com')
+      ? setError(false)
+      : setError(true);
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -66,15 +75,21 @@ export const NewsLatter = () => {
               </List>
             </Ul>
             <Form onSubmit={handleSubmit}>
-              <Label htmlFor='email'>Email address</Label>
+              <LabelWrapper $isError={error}>
+                <Label htmlFor='email'>Email address</Label>
+                <span>Valid email required</span>
+              </LabelWrapper>
               <InputEmail
+                $isError={error}
                 type='email'
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder='email@company.com'
                 required
               />
-              <Button type='submit'>Subscribe to monthly newslater</Button>
+              <Button onClick={CheckError} type='submit'>
+                Subscribe to monthly newslater
+              </Button>
             </Form>
           </Information>
           <DesktopImgWrapper>
