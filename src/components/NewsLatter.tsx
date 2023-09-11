@@ -1,5 +1,15 @@
 import { useState } from 'react';
 import { SuccessMessage } from './SuccessMessage';
+import {
+  Container,
+  Wrapper,
+  MobileImgWrapper,
+  MobileImage,
+  DesktopImgWrapper,
+  DesktopImage,
+  Information,
+  Title,
+} from './NewsLatter.style';
 
 export const NewsLatter = () => {
   const [email, setEmail] = useState<string>('');
@@ -11,11 +21,14 @@ export const NewsLatter = () => {
   };
 
   return (
-    <div>
+    <Container>
       {!isSubmitted ? (
-        <div>
-          <div>
-            <h1>Stay updated!</h1>
+        <Wrapper>
+          <MobileImgWrapper>
+            <MobileImage />
+          </MobileImgWrapper>
+          <Information>
+            <Title>Stay updated!</Title>
             <p>Join 60,000+ product managers receiving monthly updates on:</p>
             <ul>
               <li>
@@ -41,15 +54,15 @@ export const NewsLatter = () => {
               />
               <button type='submit'>Subscribe to monthly newslater</button>
             </form>
-          </div>
-          <div>
-            <img src='' alt='' />
-          </div>
-        </div>
+          </Information>
+          <DesktopImgWrapper>
+            <DesktopImage src='' alt='' />
+          </DesktopImgWrapper>
+        </Wrapper>
       ) : (
         <SuccessMessage />
       )}
-    </div>
+    </Container>
   );
 };
 /*
