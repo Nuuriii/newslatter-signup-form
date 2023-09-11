@@ -21,6 +21,7 @@ import {
   Form,
   Label,
   InputEmail,
+  Button,
 } from './NewsLatter.style';
 
 export const NewsLatter = () => {
@@ -70,9 +71,10 @@ export const NewsLatter = () => {
                 type='email'
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
+                placeholder='email@company.com'
                 required
               />
-              <button type='submit'>Subscribe to monthly newslater</button>
+              <Button type='submit'>Subscribe to monthly newslater</Button>
             </Form>
           </Information>
           <DesktopImgWrapper>

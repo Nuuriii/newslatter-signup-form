@@ -5,7 +5,7 @@ import BoldRoboto from '../assets/fonts/Roboto-Bold.ttf';
 export const Container = styled.div`
   display: flex;
   height: 100vh;
-  background-color: hsl(234, 29%, 20%);
+  background-color: hsl(235, 18%, 26%);
   justify-content: center;
   align-items: center;
 
@@ -90,11 +90,13 @@ export const Span = styled.span`
 export const Form = styled.form`
   display: flex;
   flex-direction: column;
+  margin: 1rem 0;
 `;
 
 export const Label = styled.label`
   font-family: BoldRoboto, serif;
   color: hsl(234, 29%, 20%);
+  font-size: 0.8rem;
 `;
 
 export const InputEmail = styled.input`
@@ -102,7 +104,21 @@ export const InputEmail = styled.input`
   border-radius: 0.4rem;
   outline: 1px solid hsl(231, 7%, 60%);
   padding: 1rem;
+  margin: 0.3rem 0 1.3rem 0;
   &:focus {
     outline: 2px solid hsl(234, 29%, 20%);
+  }
+`;
+
+export const Button = styled.button`
+  color: hsl(0, 0%, 100%);
+  font-family: BoldRoboto, serif;
+  border: none;
+  background-color: hsl(234, 29%, 20%);
+  padding: 1rem;
+  border-radius: 0.4rem;
+  text-align: center;
+  &:active {
+    transform: scale(0.989);
   }
 `;
