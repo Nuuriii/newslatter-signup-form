@@ -1,9 +1,9 @@
-import { AdviceGenerator } from "./components/AdviceGenerator";
+import { NewsLatter } from './components/NewsLatter';
 
 export const App = () => {
   return (
     <>
-      <AdviceGenerator />
+      <NewsLatter />
     </>
   );
 };
