@@ -1,8 +1,12 @@
 import SuccessIcon from '../../assets/icon-success.svg';
 import { Container } from '../newslatter/NewsLatter.style';
-import { Wrapper, SuccessImg, Title, Text } from './Succes.style';
+import { Wrapper, SuccessImg, Title, Text, Button } from './Succes.style';
 
-export const SuccessMessage = () => {
+interface UserEmail {
+  email: string;
+}
+
+export const SuccessMessage = ({ email }: UserEmail) => {
   const handleReturnToForm = () => {
     window.location.reload();
   };
@@ -13,10 +17,10 @@ export const SuccessMessage = () => {
         <Title>Thanks for subscribing!</Title>
         <Text>
           A confirmation email has been sent to
-          <span> ash@loremcompany.com.</span> Please open it and click the
-          button inside to confirm your subscription.
+          <span> {email}.</span> Please open it and click the button inside to
+          confirm your subscription.
         </Text>
-        <button onClick={handleReturnToForm}>Dismiss message</button>
+        <Button onClick={handleReturnToForm}>Dismiss message</Button>
       </Wrapper>
     </Container>
   );

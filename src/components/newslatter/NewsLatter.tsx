@@ -82,7 +82,7 @@ export const NewsLatter = () => {
           </DesktopImgWrapper>
         </Wrapper>
       ) : (
-        <SuccessMessage />
+        <SuccessMessage email={email} />
       )}
     </Container>
   );
