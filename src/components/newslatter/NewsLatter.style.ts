@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import Roboto from '../assets/fonts/Roboto-Regular.ttf';
-import BoldRoboto from '../assets/fonts/Roboto-Bold.ttf';
+import Roboto from '../../assets/fonts/Roboto-Regular.ttf';
+import BoldRoboto from '../../assets/fonts/Roboto-Bold.ttf';
 
 export const Container = styled.div`
   display: flex;

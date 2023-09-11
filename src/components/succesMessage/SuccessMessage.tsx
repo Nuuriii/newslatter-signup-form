@@ -1,15 +1,21 @@
+import SuccessIcon from '../../assets/icon-success.svg';
+import { Container, Wrapper } from '../newslatter/NewsLatter.style';
+
 export const SuccessMessage = () => {
   const handleReturnToForm = () => {
-    // Hapus alamat email dari localStorage saat pengguna kembali ke formulir
-    localStorage.removeItem('newsletterEmail');
-    // Kembalikan ke tampilan formulir
-    window.location.reload(); // Anda bisa menggunakan pendekatan yang lebih baik jika ada, misalnya dengan mengubah state komponen App
+    window.location.reload();
   };
   return (
-    <div>
-      <h2>Thank you for subscribing!</h2>
-      <p>You will receive our newsletter in your inbox.</p>
-      <button onClick={handleReturnToForm}>Kembali</button>
-    </div>
+    <Container>
+      <Wrapper>
+        <img src={SuccessIcon} alt='' />
+        <h2>Thanks for subscribing!</h2>
+        <p>
+          A confirmation email has been sent to ash@loremcompany.com. Please
+          open it and click the button inside to confirm your subscription.
+        </p>
+        <button onClick={handleReturnToForm}>Dismiss message</button>
+      </Wrapper>
+    </Container>
   );
 };

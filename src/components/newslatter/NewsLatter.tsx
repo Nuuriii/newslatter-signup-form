@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { SuccessMessage } from '../succesMessage/SuccessMessage';
-import MobileImg from '../assets/illustration-sign-up-mobile.svg';
-import DesktopImg from '../assets/illustration-sign-up-desktop.svg';
-import IconList from '../assets/icon-list.svg';
+import MobileImg from '../../assets/illustration-sign-up-mobile.svg';
+import DesktopImg from '../../assets/illustration-sign-up-desktop.svg';
+import IconList from '../../assets/icon-list.svg';
 import {
   Container,
   Wrapper,
