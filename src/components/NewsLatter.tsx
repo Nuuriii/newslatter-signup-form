@@ -1,5 +1,8 @@
 import { useState } from 'react';
 import { SuccessMessage } from './SuccessMessage';
+import MobileImg from '../assets/illustration-sign-up-mobile.svg';
+import DesktopImg from '../assets/illustration-sign-up-desktop.svg';
+import IconList from '../assets/icon-list.svg';
 import {
   Container,
   Wrapper,
@@ -9,6 +12,15 @@ import {
   DesktopImage,
   Information,
   Title,
+  Text,
+  Ul,
+  List,
+  IconWrapper,
+  ListIcon,
+  Span,
+  Form,
+  Label,
+  InputEmail,
 } from './NewsLatter.style';
 
 export const NewsLatter = () => {
@@ -25,38 +37,46 @@ export const NewsLatter = () => {
       {!isSubmitted ? (
         <Wrapper>
           <MobileImgWrapper>
-            <MobileImage />
+            <MobileImage src={MobileImg} />
           </MobileImgWrapper>
           <Information>
             <Title>Stay updated!</Title>
-            <p>Join 60,000+ product managers receiving monthly updates on:</p>
-            <ul>
-              <li>
-                <img src='' alt='' />
-                <span>Product discovery and building what matters</span>
-              </li>
-              <li>
-                <img src='' alt='' />
-                <span>Measuring to ensure updates are a success</span>
-              </li>
-              <li>
-                <img src='' alt='' />
-                <span>And much more!</span>
-              </li>
-            </ul>
-            <form onSubmit={handleSubmit}>
-              <label htmlFor='email'>Email address</label>
-              <input
+            <Text>
+              Join 60,000+ product managers receiving monthly updates on:
+            </Text>
+            <Ul>
+              <List>
+                <IconWrapper>
+                  <ListIcon src={IconList} alt='list icon' />
+                </IconWrapper>
+                <Span>Product discovery and building what matters</Span>
+              </List>
+              <List>
+                <IconWrapper>
+                  <ListIcon src={IconList} alt='list icon' />
+                </IconWrapper>
+                <Span>Measuring to ensure updates are a success</Span>
+              </List>
+              <List>
+                <IconWrapper>
+                  <ListIcon src={IconList} alt='list icon' />
+                </IconWrapper>
+                <Span>And much more!</Span>
+              </List>
+            </Ul>
+            <Form onSubmit={handleSubmit}>
+              <Label htmlFor='email'>Email address</Label>
+              <InputEmail
                 type='email'
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
               />
               <button type='submit'>Subscribe to monthly newslater</button>
-            </form>
+            </Form>
           </Information>
           <DesktopImgWrapper>
-            <DesktopImage src='' alt='' />
+            <DesktopImage src={DesktopImg} alt='' />
           </DesktopImgWrapper>
         </Wrapper>
       ) : (
