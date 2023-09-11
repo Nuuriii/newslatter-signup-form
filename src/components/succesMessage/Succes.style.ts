@@ -55,4 +55,15 @@ export const Button = styled.button`
   &:active {
     transform: scale(0.989);
   }
+  &:hover {
+    background: rgb(2, 0, 36);
+    background: linear-gradient(
+      90deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(249, 46, 97, 1) 0%,
+      rgba(251, 87, 67, 1) 54%,
+      rgba(244, 94, 3, 1) 100%
+    );
+    color: hsl(0, 0%, 100%);
+  }
 `;
