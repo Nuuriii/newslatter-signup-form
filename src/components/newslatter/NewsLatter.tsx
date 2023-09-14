@@ -59,7 +59,7 @@ export const NewsLatter = () => {
                 <IconWrapper>
                   <ListIcon src={IconList} alt='list icon' />
                 </IconWrapper>
-                <Span>Produc discovery and building what matters</Span>
+                <Span>Product discovery and building what matters</Span>
               </List>
               <List>
                 <IconWrapper>
