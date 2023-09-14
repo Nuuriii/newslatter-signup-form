@@ -102,5 +102,3 @@ export const NewsLatter = () => {
     </Container>
   );
 };
-/*
- */
