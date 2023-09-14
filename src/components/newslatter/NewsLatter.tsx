@@ -103,6 +103,4 @@ export const NewsLatter = () => {
   );
 };
 /*
-
-  Subscribe to monthly newsletter
-*/
+ */
