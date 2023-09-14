@@ -50,7 +50,7 @@ export const NewsLatter = () => {
             <MobileImage src={MobileImg} />
           </MobileImgWrapper>
           <Information>
-            <Title>tay updated!</Title>
+            <Title>Stay updated!</Title>
             <Text>
               Join 60,000+ product managers receiving monthly updates on:
             </Text>
