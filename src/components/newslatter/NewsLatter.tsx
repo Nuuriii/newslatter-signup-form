@@ -52,7 +52,7 @@ export const NewsLatter = () => {
           <Information>
             <Title>Stay updated!</Title>
             <Text>
-              Join 6,000+ product managers receiving monthly updates on:
+              Join 60,000+ product managers receiving monthly updates on:
             </Text>
             <Ul>
               <List>
