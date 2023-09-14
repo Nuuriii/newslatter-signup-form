@@ -77,7 +77,7 @@ export const NewsLatter = () => {
             <Form onSubmit={handleSubmit}>
               <LabelWrapper $isError={error}>
                 <Label htmlFor='email'>Email address</Label>
-                <span>Valid email required</span>
+                <span>Valid email require</span>
               </LabelWrapper>
               <InputEmail
                 $isError={error}
