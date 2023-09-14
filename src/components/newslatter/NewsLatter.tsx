@@ -104,8 +104,5 @@ export const NewsLatter = () => {
 };
 /*
 
-  Email address
-  email@company.com
-
   Subscribe to monthly newsletter
 */
