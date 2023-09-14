@@ -88,7 +88,7 @@ export const NewsLatter = () => {
                 required
               />
               <Button onClick={CheckError} type='submit'>
-                Subscribe to monthly newslater
+                Subscribe to monthly newsater
               </Button>
             </Form>
           </Information>
