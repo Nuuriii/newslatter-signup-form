@@ -71,7 +71,7 @@ export const NewsLatter = () => {
                 <IconWrapper>
                   <ListIcon src={IconList} alt='list icon' />
                 </IconWrapper>
-                <Span>And much more!</Span>
+                <Span>And much mre!</Span>
               </List>
             </Ul>
             <Form onSubmit={handleSubmit}>
