@@ -103,7 +103,7 @@ export const NewsLatter = () => {
   );
 };
 /*
-Stay updated!
+
 
   Join 60,000+ product managers receiving monthly updates on:
 
