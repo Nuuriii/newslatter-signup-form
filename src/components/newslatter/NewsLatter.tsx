@@ -65,7 +65,7 @@ export const NewsLatter = () => {
                 <IconWrapper>
                   <ListIcon src={IconList} alt='list icon' />
                 </IconWrapper>
-                <Span>Measuring o ensure updates are a success</Span>
+                <Span>Measuring to ensure updates are a success</Span>
               </List>
               <List>
                 <IconWrapper>
