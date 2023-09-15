@@ -131,19 +131,25 @@ export const Label = styled.label`
 export const InputEmail = styled.input<{ $isError: boolean }>`
   border: none;
   border-radius: 0.4rem;
-  outline: 1px solid hsl(231, 7%, 60%);
+  outline: 1px solid
+    ${(props) => (props.$isError ? 'hsl(4, 100%, 67%)' : 'hsl(234, 29%, 20%)')};
   padding: 1rem;
+  color: ${(props) =>
+    props.$isError ? 'hsl(4, 100%, 67%)  ' : 'hsl(234, 29%, 20%)'};
   font-family: BoldRoboto, serif;
   margin: 0.3rem 0 1.3rem 0;
+  &:active {
+  }
   &:focus {
     outline: 1px solid
       ${(props) =>
         props.$isError ? 'hsl(4, 100%, 67%)' : 'hsl(234, 29%, 20%)'};
-    color: hsl(234, 29%, 20%);
+    color: ${(props) =>
+      props.$isError ? 'hsl(4, 100%, 67%)  ' : 'hsl(234, 29%, 20%)'};
     &::placeholder {
       font-family: BoldRoboto, serif;
       color: ${(props) =>
-        props.$isError ? 'hsl(4, 100%, 67%)' : 'hsl(234, 29%, 20%)'};
+        props.$isError ? 'hsl(4, 100%, 67%)  ' : 'hsl(234, 29%, 20%)'};
     }
   }
 `;

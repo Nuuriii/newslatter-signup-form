@@ -28,20 +28,19 @@ import {
 export const NewsLatter = () => {
   const [email, setEmail] = useState<string>('');
   const [error, setError] = useState(false);
-
   const [isSubmitted, setIsSubmitted] = useState<boolean>(false);
 
   const CheckError = () => {
-    email && email.includes('@') && email.includes('.com')
+    email.includes('.com') && email.includes('@')
       ? setError(false)
       : setError(true);
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitted(true);
+    error === true ? setIsSubmitted(false) : setIsSubmitted(true);
   };
-
+  console.log(error);
   return (
     <Container>
       {!isSubmitted ? (
