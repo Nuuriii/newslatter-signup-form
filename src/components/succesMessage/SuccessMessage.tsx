@@ -1,6 +1,13 @@
 import SuccessIcon from '../../assets/icon-success.svg';
-import { Container } from '../newslatter/NewsLatter.style';
-import { Wrapper, SuccessImg, Title, Text, Button } from './Succes.style';
+
+import {
+  Container,
+  Wrapper,
+  SuccessImg,
+  Title,
+  Text,
+  Button,
+} from './Succes.style';
 
 interface UserEmail {
   email: string;

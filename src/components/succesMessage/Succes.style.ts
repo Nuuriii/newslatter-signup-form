@@ -1,12 +1,31 @@
+import Roboto from '../../assets/fonts/Roboto-Regular.ttf';
+import BoldRoboto from '../../assets/fonts/Roboto-Bold.ttf';
+
 import styled from 'styled-components';
 
+export const Container = styled.div`
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  @font-face {
+    font-family: Roboto;
+    src: url(${Roboto});
+  }
+
+  @font-face {
+    font-family: BoldRoboto;
+    src: url(${BoldRoboto});
+  }
+`;
+
 export const Wrapper = styled.div`
+  height: 100%;
   display: flex;
   background-color: hsl(0, 0%, 100%);
   flex-direction: column;
   align-items: baseline;
   justify-content: center;
-  height: 100%;
   padding: 1rem;
   font-family: Roboto, serif;
   @media screen and (min-width: 468px) {

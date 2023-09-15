@@ -4,15 +4,13 @@ import BoldRoboto from '../../assets/fonts/Roboto-Bold.ttf';
 
 export const Container = styled.div`
   display: flex;
-  height: 100vh;
+  height: 100%;
   justify-content: center;
   align-items: center;
-
   @font-face {
     font-family: Roboto;
     src: url(${Roboto});
   }
-
   @font-face {
     font-family: BoldRoboto;
     src: url(${BoldRoboto});
