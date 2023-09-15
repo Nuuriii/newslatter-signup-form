@@ -40,7 +40,7 @@ export const NewsLatter = () => {
     e.preventDefault();
     error === true ? setIsSubmitted(false) : setIsSubmitted(true);
   };
-  console.log(error);
+
   return (
     <Container>
       {!isSubmitted ? (
