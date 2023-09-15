@@ -5,7 +5,6 @@ import BoldRoboto from '../../assets/fonts/Roboto-Bold.ttf';
 export const Container = styled.div`
   display: flex;
   height: 100vh;
-  background-color: hsl(235, 18%, 26%);
   justify-content: center;
   align-items: center;
 
