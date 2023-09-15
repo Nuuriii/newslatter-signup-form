@@ -141,7 +141,7 @@ export const InputEmail = styled.input<{ $isError: boolean }>`
   &:active {
   }
   &:focus {
-    outline: 1px solid
+    outline: 2px solid
       ${(props) =>
         props.$isError ? 'hsl(4, 100%, 67%)' : 'hsl(234, 29%, 20%)'};
     color: ${(props) =>
